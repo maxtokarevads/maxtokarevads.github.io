@@ -56,6 +56,11 @@ var translations = {
       success_title:'Request sent!', success_text:"I'll get back to you within a few hours. Check your email or Telegram.",
       faq_label:'FAQ', faq_title:'Common questions'
     },
+    widget: {
+      overview:'Campaign Overview', revenue:'Weekly Revenue',
+      notif1_sub:'Google Shopping · just now',
+      notif2:'CPL dropped 38%', notif2_sub:'Meta Ads · Fitness Studio'
+    },
     footer: { specialist:'PPC Specialist.' },
     article: { back:'← Back to Blog', notice:'' }
   },
@@ -117,6 +122,11 @@ var translations = {
       success_title:'Запит надіслано!', success_text:'Відповім протягом кількох годин. Перевірте email або Telegram.',
       faq_label:'FAQ', faq_title:'Часті запитання'
     },
+    widget: {
+      overview:'Огляд кампаній', revenue:'Тижневий дохід',
+      notif1_sub:'Google Shopping · щойно',
+      notif2:'CPL знизився на 38%', notif2_sub:'Meta Ads · Fitness Studio'
+    },
     footer: { specialist:'PPC-спеціаліст.' },
     article: { back:'← До блогу', notice:'Ця стаття доступна лише англійською мовою' }
   },
@@ -177,6 +187,11 @@ var translations = {
       submit:'Отправить запрос →', response:'Время ответа', response_val:'Обычно в течение 2–4 часов в рабочие дни',
       success_title:'Запрос отправлен!', success_text:'Отвечу в течение нескольких часов. Проверьте email или Telegram.',
       faq_label:'FAQ', faq_title:'Частые вопросы'
+    },
+    widget: {
+      overview:'Обзор кампаний', revenue:'Недельный доход',
+      notif1_sub:'Google Shopping · только что',
+      notif2:'CPL снизился на 38%', notif2_sub:'Meta Ads · Fitness Studio'
     },
     footer: { specialist:'PPC-специалист.' },
     article: { back:'← В блог', notice:'Эта статья доступна только на английском языке' }
