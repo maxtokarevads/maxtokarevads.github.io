@@ -185,6 +185,7 @@ var translations = {
     }
   },
 
+  res: { free:'Free', free_paid:'Free / Paid', paid_299:'Paid (+/mo)', paid_45:'Paid (+/mo)', paid_119:'Paid (+/mo)', paid_19:'Paid (+/mo)' },
   uk: {
     nav: { home:'Головна', services:'Послуги', cases:'Кейси', blog:'Блог', resources:'Ресурси', cta:"Зв'язатися" },
     footer_links: { services:'Послуги', cases:'Кейси', resources:'Ресурси', contact:'Контакти', blog:'Блог' },
@@ -386,6 +387,7 @@ var translations = {
     }
   },
 
+  res: { free:'Безкоштовно', free_paid:'Безкоштовно / Платно', paid_299:'Платно (+/міс)', paid_45:'Платно (+/міс)', paid_119:'Платно (+/міс)', paid_19:'Платно (+/міс)' },
   ru: {
     nav: { home:'Главная', services:'Услуги', cases:'Кейсы', blog:'Блог', resources:'Ресурсы', cta:'Связаться' },
     footer_links: { services:'Услуги', cases:'Кейсы', resources:'Ресурсы', contact:'Контакты', blog:'Блог' },
@@ -586,4 +588,5 @@ var translations = {
       case6_list:'<strong>Что я сделал:</strong><ul><li>Аудит выявил 200+ нерелевантных поисковых запросов, поедавших бюджет</li><li>Перешёл на точное и фразовое соответствие во всех кампаниях</li><li>Добавил 350+ минус-слов</li><li>Запустил RLSA — повышенные ставки для предыдущих посетителей сайта</li></ul>'
     }
   }
+  res: { free:'Бесплатно', free_paid:'Бесплатно / Платно', paid_299:'Платно (+/мес)', paid_45:'Платно (+/мес)', paid_119:'Платно (+/мес)', paid_19:'Платно (+/мес)' },
 };
