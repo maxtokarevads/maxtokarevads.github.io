@@ -1,4 +1,4 @@
-const translations = {
+var translations = {
   en: {
     nav: { home:'Home', services:'Services', cases:'Case Studies', blog:'Blog', resources:'Resources', cta:'Get in Touch' },
     footer_links: { services:'Services', cases:'Case Studies', resources:'Resources', contact:'Contact', blog:'Blog' },
