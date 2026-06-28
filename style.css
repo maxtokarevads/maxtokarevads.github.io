@@ -49,6 +49,45 @@ body::before {
 .glow-orb-1 { width: 600px; height: 600px; background: rgba(132,204,22,0.15); top: -200px; right: -100px; }
 .glow-orb-2 { width: 400px; height: 400px; background: rgba(101,163,13,0.12); bottom: -100px; left: -100px; }
 
+/* ─── LANG SWITCHER ─── */
+.lang-switcher {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+}
+.lang-btn {
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text3);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+}
+.lang-btn:hover { color: var(--text); border-color: var(--border); }
+.lang-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+/* Article language notice */
+#lang-notice {
+  display: none;
+  background: rgba(132,204,22,0.08);
+  border: 1px solid rgba(132,204,22,0.25);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+
 /* ─── NAV ─── */
 nav {
   position: fixed;

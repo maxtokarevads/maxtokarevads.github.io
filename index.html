@@ -61,35 +61,36 @@
       <li><a href="resources.html">Resources</a></li>
       <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
     </ul>
+    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
     <div class="burger"><span></span><span></span><span></span></div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><span class="dot"></span> Available for new projects</div>
-      <h1>Ads that actually<br><span class="grad">make you money</span></h1>
-      <p>I run performance advertising across 8 platforms — Google, Meta, TikTok, LinkedIn, Telegram, Reddit, Snapchat and Bing. Every dollar tracked, optimized, working toward real ROI.</p>
+      <div class="hero-badge"><span class="dot"></span> <span data-i18n="hero.badge">Available for new projects</span></div>
+      <h1><span data-i18n="hero.title1">Ads that actually</span><br><span class="grad" data-i18n="hero.title2">make you money</span></h1>
+      <p data-i18n="hero.subtitle">I run performance advertising across 8 platforms — Google, Meta, TikTok, LinkedIn, Telegram, Reddit, Snapchat and Bing. Every dollar tracked, optimized, working toward real ROI.</p>
       <div class="hero-btns">
-        <a href="contact.html" class="btn-primary">Start a project →</a>
-        <a href="cases.html" class="btn-secondary">View case studies</a>
+        <a href="contact.html" class="btn-primary" data-i18n="hero.cta1">Start a project →</a>
+        <a href="cases.html" class="btn-secondary" data-i18n="hero.cta2">View case studies</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
           <div class="stat-num"><span class="green" data-target="4.2" data-decimal="true" data-suffix="×">0×</span></div>
-          <div class="stat-label">Average ROAS</div>
+          <div class="stat-label" data-i18n="stats.roas">Average ROAS</div>
         </div>
         <div class="stat-item">
           <div class="stat-num"><span data-target="50" data-suffix="+">0+</span></div>
-          <div class="stat-label">Projects launched</div>
+          <div class="stat-label" data-i18n="stats.projects">Projects launched</div>
         </div>
         <div class="stat-item">
           <div class="stat-num"><span data-target="6" data-suffix=" yrs">0</span></div>
-          <div class="stat-label">PPC experience</div>
+          <div class="stat-label" data-i18n="stats.exp">PPC experience</div>
         </div>
       </div>
       <div class="hero-platform-logos">
-        <span class="hp-label">8 platforms</span>
+        <span class="hp-label" data-i18n="hero.platforms">8 platforms</span>
         <span class="hp-logo hp-google">Google Ads</span>
         <span class="hp-logo hp-meta">Meta</span>
         <span class="hp-logo hp-tiktok">TikTok</span>
@@ -177,9 +178,9 @@
 
   <!-- SERVICES PREVIEW -->
   <section>
-    <div class="section-label">What I do</div>
-    <h2 class="section-title fade-in">Services</h2>
-    <p class="section-sub fade-in">Full-cycle performance advertising — from audit and strategy to setup, optimization, and reporting.</p>
+    <div class="section-label" data-i18n="sections.services_label">What I do</div>
+    <h2 class="section-title fade-in" data-i18n="sections.services_title">Services</h2>
+    <p class="section-sub fade-in" data-i18n="sections.services_sub">Full-cycle performance advertising — from audit and strategy to setup, optimization, and reporting.</p>
 
     <div class="services-grid">
       <div class="service-card fade-in">
@@ -226,7 +227,7 @@
 
   <!-- PROCESS -->
   <section>
-    <div class="section-label">How I work</div>
+    <div class="section-label" data-i18n="sections.process_label">How I work</div>
     <h2 class="section-title fade-in">Process</h2>
 
     <div class="process-steps">
@@ -305,7 +306,7 @@
 
   <!-- CASES PREVIEW -->
   <section>
-    <div class="section-label">Results</div>
+    <div class="section-label" data-i18n="sections.cases_label">Results</div>
     <h2 class="section-title fade-in">Recent Case Studies</h2>
     <p class="section-sub fade-in">Real numbers from real projects. No inflated benchmarks.</p>
 
@@ -479,7 +480,7 @@
     </div>
 
     <div style="margin-top:40px;text-align:center;">
-      <a href="blog.html" class="btn-secondary">All articles →</a>
+      <a href="blog.html" class="btn-secondary" data-i18n="sections.blog_all">All articles →</a>
     </div>
   </section>
 
@@ -507,6 +508,8 @@
   </footer>
 </div>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script defer src="translations.js"></script>
+<script defer src="i18n.js"></script>
 <script defer src="main.js"></script>
 </body>
 </html>

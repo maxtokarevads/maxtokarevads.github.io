@@ -58,11 +58,13 @@
       <li><a href="resources.html">Resources</a></li>
       <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
     </ul>
+    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
     <div class="burger"><span></span><span></span><span></span></div>
   </nav>
 
   <div class="article-hero">
-    <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text3);text-decoration:none;margin-bottom:24px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">← Back to Blog</a>
+    <a href="blog.html" data-i18n-back style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text3);text-decoration:none;margin-bottom:12px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">← Back to Blog</a>
+    <div id="lang-notice"></div>
     <div class="blog-cat strategy" style="margin-bottom:16px;">✈️ Telegram Ads</div>
     <h1>Telegram Ads in 2026: Full Setup Guide for E-commerce and B2C</h1>
     <div class="article-meta-row">
@@ -185,6 +187,8 @@
   </footer>
 </div>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script defer src="translations.js"></script>
+<script defer src="i18n.js"></script>
 <script defer src="main.js"></script>
 </body>
 </html>

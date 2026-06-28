@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -115,23 +115,24 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html" class="nav-cta active">Get in Touch</a></li>
     </ul>
+    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
     <div class="burger"><span></span><span></span><span></span></div>
   </nav>
 
   <div class="page-hero">
-    <div class="section-label">Let's work together</div>
-    <h1 class="fade-in">Contact</h1>
-    <p class="fade-in">Describe your project and I'll get back to you within a few hours with a first take on what we can do.</p>
+    <div class="section-label" data-i18n="contact.label">Let's work together</div>
+    <h1 class="fade-in" data-i18n="contact.title">Contact</h1>
+    <p class="fade-in" data-i18n="contact.subtitle">Describe your project and I'll get back to you within a few hours with a first take on what we can do.</p>
   </div>
 
   <section>
-    <div class="avail-badge"><span class="avail-dot"></span> Available for new projects</div>
+    <div class="avail-badge"><span class="avail-dot"></span> <span data-i18n="contact.avail">Available for new projects</span></div>
 
     <div class="contact-grid">
       <!-- Info -->
       <div class="contact-info fade-in">
-        <h3>Ready to work together?</h3>
-        <p>Tell me about your business, budget and goals — I'll run a free first consultation and tell you exactly what can be improved in your advertising.</p>
+        <h3 data-i18n="contact.ready">Ready to work together?</h3>
+        <p data-i18n="contact.ready_sub">Tell me about your business, budget and goals — I'll run a free first consultation and tell you exactly what can be improved in your advertising.</p>
 
         <div class="contact-links">
           <a href="mailto:maxtokarevads@gmail.com" class="contact-link">
@@ -158,8 +159,8 @@
         </div>
 
         <div style="margin-top: 36px; padding: 20px; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius);">
-          <div style="font-size: 13px; color: var(--text3); margin-bottom: 6px;">Response time</div>
-          <div style="font-size: 15px; font-weight: 600;">Usually within 2–4 hours on business days</div>
+          <div style="font-size: 13px; color: var(--text3); margin-bottom: 6px;" data-i18n="contact.response">Response time</div>
+          <div style="font-size: 15px; font-weight: 600;" data-i18n="contact.response_val">Usually within 2–4 hours on business days</div>
         </div>
       </div>
 
@@ -167,33 +168,33 @@
       <div class="contact-form fade-in fade-in-delay-1">
         <!-- Formspree: replace YOUR_FORM_ID after registering at formspree.io -->
         <form id="contactForm" method="POST">
-          <h3>Book a free consultation</h3>
-          <div class="form-sub">No commitment. I'll review your situation and tell you what I'd do.</div>
+          <h3 data-i18n="contact.form_title">Book a free consultation</h3>
+          <div class="form-sub" data-i18n="contact.form_sub">No commitment. I'll review your situation and tell you what I'd do.</div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>Your name *</label>
+              <label data-i18n="contact.name">Your name *</label>
               <input type="text" name="name" placeholder="John Smith" required>
             </div>
             <div class="form-group">
-              <label>Company</label>
+              <label data-i18n="contact.company">Company</label>
               <input type="text" name="company" placeholder="Company name">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>Email *</label>
+              <label data-i18n="contact.email">Email *</label>
               <input type="email" name="email" placeholder="john@example.com" required>
             </div>
             <div class="form-group">
-              <label>Telegram</label>
+              <label data-i18n="contact.telegram">Telegram</label>
               <input type="text" name="telegram" placeholder="@username">
             </div>
           </div>
 
           <div class="form-group">
-            <label>Advertising platform</label>
+            <label data-i18n="contact.platform">Advertising platform</label>
             <select name="platform">
               <option value="">Select a platform</option>
               <option>Google Ads</option>
@@ -210,7 +211,7 @@
           </div>
 
           <div class="form-group">
-            <label>Monthly ad budget</label>
+            <label data-i18n="contact.budget">Monthly ad budget</label>
             <select name="budget">
               <option value="">Select budget range</option>
               <option>Under $1,000</option>
@@ -221,17 +222,17 @@
           </div>
 
           <div class="form-group">
-            <label>Describe your project *</label>
-            <textarea name="message" placeholder="Tell me about your business, current situation, and what you want to improve..." required></textarea>
+            <label data-i18n="contact.message">Describe your project *</label>
+            <textarea name="message" placeholder="Tell me about your business, current situation, and what you want to improve..." data-i18n-ph="contact.message_ph" required></textarea>
           </div>
 
-          <button type="submit" class="form-submit">Send request →</button>
+          <button type="submit" class="form-submit" data-i18n="contact.submit">Send request →</button>
         </form>
 
         <div class="form-success">
           <div class="check">✅</div>
-          <h4>Request sent!</h4>
-          <p>I'll get back to you within a few hours. Check your email or Telegram.</p>
+          <h4 data-i18n="contact.success_title">Request sent!</h4>
+          <p data-i18n="contact.success_text">I'll get back to you within a few hours. Check your email or Telegram.</p>
         </div>
       </div>
     </div>
@@ -239,8 +240,8 @@
     <!-- FAQ -->
     <div class="faq-list">
       <div style="margin-bottom: 8px;">
-        <div class="section-label">FAQ</div>
-        <h2 class="section-title" style="font-size: 32px;">Common questions</h2>
+        <div class="section-label" data-i18n="contact.faq_label">FAQ</div>
+        <h2 class="section-title" style="font-size: 32px;" data-i18n="contact.faq_title">Common questions</h2>
       </div>
 
       <div class="faq-item">
@@ -301,6 +302,8 @@
   </footer>
 </div>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script defer src="translations.js"></script>
+<script defer src="i18n.js"></script>
 <script defer src="main.js"></script>
 <script>
 function toggleFaq(el) {
