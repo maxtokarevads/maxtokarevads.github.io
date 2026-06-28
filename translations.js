@@ -63,6 +63,7 @@ var translations = {
     },
     footer: { specialist:'PPC Specialist.' },
     article: { back:'← Back to Blog', notice:'' },
+    res: { free:'Free', free_paid:'Free / Paid', paid_299:'Paid (\+/mo)', paid_45:'Paid (\+/mo)', paid_119:'Paid (\+/mo)', paid_19:'Paid (\+/mo)' },
     blog_page: {
       title:'PPC Blog',
       subtitle:'Practical guides and breakdowns based on real campaigns. No filler — just what actually works.',
@@ -185,7 +186,6 @@ var translations = {
     }
   },
 
-  res: { free:'Free', free_paid:'Free / Paid', paid_299:'Paid (+/mo)', paid_45:'Paid (+/mo)', paid_119:'Paid (+/mo)', paid_19:'Paid (+/mo)' },
   uk: {
     nav: { home:'Головна', services:'Послуги', cases:'Кейси', blog:'Блог', resources:'Ресурси', cta:"Зв'язатися" },
     footer_links: { services:'Послуги', cases:'Кейси', resources:'Ресурси', contact:'Контакти', blog:'Блог' },
@@ -250,6 +250,7 @@ var translations = {
     },
     footer: { specialist:'PPC-спеціаліст.' },
     article: { back:'← До блогу', notice:'Ця стаття доступна лише англійською мовою' },
+    res: { free:'Безкоштовно', free_paid:'Безкоштовно / Платно', paid_299:'Платно (\+/міс)', paid_45:'Платно (\+/міс)', paid_119:'Платно (\+/міс)', paid_19:'Платно (\+/міс)' },
     blog_page: {
       title:'PPC Блог',
       subtitle:'Практичні гайди та розбори на основі реальних кампаній. Без води — тільки те, що реально працює.',
@@ -387,7 +388,6 @@ var translations = {
     }
   },
 
-  res: { free:'Безкоштовно', free_paid:'Безкоштовно / Платно', paid_299:'Платно (+/міс)', paid_45:'Платно (+/міс)', paid_119:'Платно (+/міс)', paid_19:'Платно (+/міс)' },
   ru: {
     nav: { home:'Главная', services:'Услуги', cases:'Кейсы', blog:'Блог', resources:'Ресурсы', cta:'Связаться' },
     footer_links: { services:'Услуги', cases:'Кейсы', resources:'Ресурсы', contact:'Контакты', blog:'Блог' },
@@ -452,6 +452,7 @@ var translations = {
     },
     footer: { specialist:'PPC-специалист.' },
     article: { back:'← В блог', notice:'Эта статья доступна только на английском языке' },
+    res: { free:'Бесплатно', free_paid:'Бесплатно / Платно', paid_299:'Платно (\+/мес)', paid_45:'Платно (\+/мес)', paid_119:'Платно (\+/мес)', paid_19:'Платно (\+/мес)' },
     blog_page: {
       title:'PPC Блог',
       subtitle:'Практические гайды и разборы на основе реальных кампаний. Без воды — только то, что реально работает.',
@@ -588,5 +589,4 @@ var translations = {
       case6_list:'<strong>Что я сделал:</strong><ul><li>Аудит выявил 200+ нерелевантных поисковых запросов, поедавших бюджет</li><li>Перешёл на точное и фразовое соответствие во всех кампаниях</li><li>Добавил 350+ минус-слов</li><li>Запустил RLSA — повышенные ставки для предыдущих посетителей сайта</li></ul>'
     }
   }
-  res: { free:'Бесплатно', free_paid:'Бесплатно / Платно', paid_299:'Платно (+/мес)', paid_45:'Платно (+/мес)', paid_119:'Платно (+/мес)', paid_19:'Платно (+/мес)' },
 };
