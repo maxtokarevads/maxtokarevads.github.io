@@ -80,10 +80,15 @@
       height: 6px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
     }
-    .case-img.google { background: linear-gradient(90deg, #4285f4, #34a853); }
-    .case-img.meta { background: linear-gradient(90deg, #1877f2, #42b0ff); }
-    .case-img.tiktok { background: linear-gradient(90deg, #fe2c55, #010101); }
-    .case-img.multi { background: linear-gradient(90deg, var(--accent), var(--accent2), #10b981); }
+    .case-img.google   { background: linear-gradient(90deg, #4285f4, #34a853); }
+    .case-img.meta     { background: linear-gradient(90deg, #1877f2, #42b0ff); }
+    .case-img.tiktok   { background: linear-gradient(90deg, #fe2c55, #010101); }
+    .case-img.multi    { background: linear-gradient(90deg, var(--accent), var(--accent2), #10b981); }
+    .case-img.linkedin { background: linear-gradient(90deg, #0077b5, #00a0dc); }
+    .case-img.telegram { background: linear-gradient(90deg, #0088cc, #29b6f6); }
+    .case-img.reddit   { background: linear-gradient(90deg, #ff4500, #ff6534); }
+    .case-img.snapchat { background: linear-gradient(90deg, #fffc00, #f59e0b); }
+    .case-img.bing     { background: linear-gradient(90deg, #008272, #00b4d8); }
 
     .case-body { padding: 28px; }
     .case-top {
@@ -102,9 +107,14 @@
       font-size: 11px;
       font-weight: 600;
     }
-    .cp-google { background: rgba(66,133,244,0.15); color: #93c5fd; }
-    .cp-meta { background: rgba(24,119,242,0.15); color: #60a5fa; }
-    .cp-tiktok { background: rgba(254,44,85,0.12); color: #fca5a5; }
+    .cp-google   { background: rgba(66,133,244,0.15);  color: #93c5fd; }
+    .cp-meta     { background: rgba(24,119,242,0.15);  color: #60a5fa; }
+    .cp-tiktok   { background: rgba(254,44,85,0.12);   color: #fca5a5; }
+    .cp-linkedin { background: rgba(0,119,181,0.15);   color: #7dd3fc; }
+    .cp-telegram { background: rgba(0,136,204,0.15);   color: #7dd3fc; }
+    .cp-reddit   { background: rgba(255,69,0,0.12);    color: #fdba74; }
+    .cp-snapchat { background: rgba(255,200,0,0.12);   color: #fef08a; }
+    .cp-bing     { background: rgba(0,130,114,0.12);   color: #6ee7b7; }
 
     .case-challenge {
       background: var(--bg2);
@@ -214,6 +224,8 @@
       <button class="filter-btn" onclick="filterCases('google', this)">Google Ads</button>
       <button class="filter-btn" onclick="filterCases('meta', this)">Meta Ads</button>
       <button class="filter-btn" onclick="filterCases('tiktok', this)">TikTok Ads</button>
+      <button class="filter-btn" onclick="filterCases('linkedin', this)">LinkedIn Ads</button>
+      <button class="filter-btn" onclick="filterCases('other', this)" data-i18n="cases_page.filter_other">Other Platforms</button>
     </div>
   </div>
 
@@ -395,6 +407,111 @@
               <li>Launched RLSA — higher bids for previous site visitors</li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <!-- Case 7 — LinkedIn Ads B2B HR Tech -->
+      <div class="case-full fade-in" data-platform="linkedin">
+        <div class="case-img linkedin"></div>
+        <div class="case-body">
+          <div class="case-top">
+            <div class="case-title-group">
+              <h3 data-i18n="cases_page.case7_title">B2B SaaS — HR Tech</h3>
+              <div class="niche" data-i18n="cases_page.case7_niche">Lead generation — United States</div>
+            </div>
+            <div class="case-platforms"><span class="cp-tag cp-linkedin">LinkedIn</span></div>
+          </div>
+          <div class="case-challenge" data-i18n-html="cases_page.case7_challenge"><strong>Challenge:</strong> LinkedIn CPL was $118 — too high to scale. The account used broad job function targeting without testing offer formats or ad variations.</div>
+          <div class="case-results-grid">
+            <div class="cr"><div class="cr-val g" data-target="37" data-suffix="%">0</div><div class="cr-key">↓ CPL</div></div>
+            <div class="cr"><div class="cr-val b" data-target="74" data-prefix="$">0</div><div class="cr-key">CPL</div></div>
+            <div class="cr"><div class="cr-val p" data-target="2.1" data-decimal="true" data-suffix="×">0</div><div class="cr-key">↑ SQLs</div></div>
+          </div>
+          <div class="case-what-did" data-i18n-html="cases_page.case7_list"><strong>What I did:</strong><ul><li>Narrowed to specific job titles: HR Manager, Head of People, CHRO</li><li>Switched from Sponsored Content to Lead Gen Forms — less friction</li><li>Tested 3 offers: demo, trial, case study — trial generated 2× more SQLs</li><li>Reduced frequency cap to avoid audience fatigue on small B2B segments</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Case 8 — Telegram Ads CIS E-commerce -->
+      <div class="case-full fade-in fade-in-delay-1" data-platform="telegram other">
+        <div class="case-img telegram"></div>
+        <div class="case-body">
+          <div class="case-top">
+            <div class="case-title-group">
+              <h3 data-i18n="cases_page.case8_title">Online Fashion Store</h3>
+              <div class="niche" data-i18n="cases_page.case8_niche">E-commerce — Ukraine & Kazakhstan</div>
+            </div>
+            <div class="case-platforms"><span class="cp-tag cp-telegram">Telegram</span></div>
+          </div>
+          <div class="case-challenge" data-i18n-html="cases_page.case8_challenge"><strong>Challenge:</strong> Meta CPMs in CIS markets doubled year over year. Needed a cost-effective channel to reach the same audiences at lower cost.</div>
+          <div class="case-results-grid">
+            <div class="cr"><div class="cr-val g">€0.9</div><div class="cr-key">CPM</div></div>
+            <div class="cr"><div class="cr-val b" data-target="2.8" data-decimal="true" data-suffix="×">0</div><div class="cr-key">ROAS</div></div>
+            <div class="cr"><div class="cr-val p" data-target="62" data-suffix="%">0</div><div class="cr-key">↓ Cost vs Meta</div></div>
+          </div>
+          <div class="case-what-did" data-i18n-html="cases_page.case8_list"><strong>What I did:</strong><ul><li>Set up ads.telegram.org — first Telegram Ads campaign for the brand</li><li>Targeted subscribers of fashion and lifestyle channels in UA/KZ</li><li>Tested channel-category targeting vs specific channel targeting</li><li>Specific channels outperformed by 3× on CTR — scaled budget there</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Case 9 — Reddit Ads SaaS -->
+      <div class="case-full fade-in fade-in-delay-2" data-platform="reddit other">
+        <div class="case-img reddit"></div>
+        <div class="case-body">
+          <div class="case-top">
+            <div class="case-title-group">
+              <h3 data-i18n="cases_page.case9_title">Project Management SaaS</h3>
+              <div class="niche" data-i18n="cases_page.case9_niche">Trial sign-ups — United States</div>
+            </div>
+            <div class="case-platforms"><span class="cp-tag cp-reddit">Reddit</span></div>
+          </div>
+          <div class="case-challenge" data-i18n-html="cases_page.case9_challenge"><strong>Challenge:</strong> Google CPCs for project management keywords hit $11–15. Budget was capped and user acquisition had stalled for 3 months.</div>
+          <div class="case-results-grid">
+            <div class="cr"><div class="cr-val g" data-target="1.70" data-decimal="true" data-prefix="$">0</div><div class="cr-key">CPC</div></div>
+            <div class="cr"><div class="cr-val b" data-target="110" data-suffix="%">0</div><div class="cr-key">↑ Trials</div></div>
+            <div class="cr"><div class="cr-val p" data-target="46" data-suffix="%">0</div><div class="cr-key">↓ CAC</div></div>
+          </div>
+          <div class="case-what-did" data-i18n-html="cases_page.case9_list"><strong>What I did:</strong><ul><li>Community targeting: r/projectmanagement, r/startups, r/entrepreneur</li><li>Wrote copy in Reddit's authentic tone — no sales jargon</li><li>Tested text post vs video demo — text won by 40% on CPC</li><li>Responded to ad comments daily — improved relevance and CTR</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Case 10 — Snapchat Ads Skincare -->
+      <div class="case-full fade-in" data-platform="snapchat other">
+        <div class="case-img snapchat"></div>
+        <div class="case-body">
+          <div class="case-top">
+            <div class="case-title-group">
+              <h3 data-i18n="cases_page.case10_title">Skincare Brand</h3>
+              <div class="niche" data-i18n="cases_page.case10_niche">E-commerce — United Kingdom</div>
+            </div>
+            <div class="case-platforms"><span class="cp-tag cp-snapchat">Snapchat</span></div>
+          </div>
+          <div class="case-challenge" data-i18n-html="cases_page.case10_challenge"><strong>Challenge:</strong> Meta CPMs for women aged 18–28 exceeded $14. Brand needed a cheaper channel for the same demographic without sacrificing volume.</div>
+          <div class="case-results-grid">
+            <div class="cr"><div class="cr-val g" data-target="5.40" data-decimal="true" data-prefix="$">0</div><div class="cr-key">CPM</div></div>
+            <div class="cr"><div class="cr-val b" data-target="2.3" data-decimal="true" data-suffix="×">0</div><div class="cr-key">ROAS</div></div>
+            <div class="cr"><div class="cr-val p" data-target="42" data-suffix="%">0</div><div class="cr-key">↓ CPM vs Meta</div></div>
+          </div>
+          <div class="case-what-did" data-i18n-html="cases_page.case10_list"><strong>What I did:</strong><ul><li>Installed Snap Pixel and built product catalog for Dynamic Ads</li><li>Shot native vertical content — raw UGC style, no studio production</li><li>Retargeted Snap Pixel visitors with Dynamic catalog ads</li><li>Split test: repurposed Instagram vs native Snap content — Snap won 2.8×</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Case 11 — Bing Ads Home Services -->
+      <div class="case-full fade-in fade-in-delay-1" data-platform="bing other">
+        <div class="case-img bing"></div>
+        <div class="case-body">
+          <div class="case-top">
+            <div class="case-title-group">
+              <h3 data-i18n="cases_page.case11_title">Home Renovation Company</h3>
+              <div class="niche" data-i18n="cases_page.case11_niche">Lead generation — United States</div>
+            </div>
+            <div class="case-platforms"><span class="cp-tag cp-bing">Bing</span></div>
+          </div>
+          <div class="case-challenge" data-i18n-html="cases_page.case11_challenge"><strong>Challenge:</strong> Google CPCs for renovation keywords ranged $10–18, pushing CPL to $54. Client wanted to expand reach without increasing total ad spend.</div>
+          <div class="case-results-grid">
+            <div class="cr"><div class="cr-val g" data-target="7.20" data-decimal="true" data-prefix="$">0</div><div class="cr-key">CPC</div></div>
+            <div class="cr"><div class="cr-val b" data-target="31" data-prefix="$">0</div><div class="cr-key">CPL</div></div>
+            <div class="cr"><div class="cr-val p" data-target="44" data-suffix="%">0</div><div class="cr-key">↓ CPC vs Google</div></div>
+          </div>
+          <div class="case-what-did" data-i18n-html="cases_page.case11_list"><strong>What I did:</strong><ul><li>Imported and adapted Google campaigns to Microsoft Bing</li><li>Excluded LinkedIn Audience Network — irrelevant for home services</li><li>Adjusted bids for Bing's older, higher-income 35+ demographic</li><li>Added call extensions — 38% of leads came from direct calls</li></ul></div>
         </div>
       </div>
 
