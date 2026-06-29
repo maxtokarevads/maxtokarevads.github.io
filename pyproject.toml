@@ -1,0 +1,73 @@
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+no_implicit_reexport = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+# Core public API — strict type checking
+[[tool.mypy.overrides]]
+module = [
+    "agents.base_agent",
+    "agents.base_router",
+    "agents.manager",
+    "agents.ads.agent",
+    "agents.seo.agent",
+    "agents.strategy.agent",
+    "agents.creative.agent",
+    "integrations.vault_reader",
+    "storage",
+]
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_any_generics = false
+strict_optional = true
+
+# Skills/builders are prompt templates — no typed API contract, exclude from strict
+[[tool.mypy.overrides]]
+module = [
+    "agents.ads.skills.*",
+    "agents.seo.skills.*",
+    "agents.strategy.skills.*",
+    "agents.creative.skills.*",
+]
+ignore_errors = true
+
+# Integration modules with untyped third-party clients
+[[tool.mypy.overrides]]
+module = [
+    "integrations.url_inspector",
+    "integrations.pagespeed_client",
+    "integrations.gsc_client",
+    "integrations.google_ads_connector",
+    "integrations.meta_ads_connector",
+    "integrations.tiktok_ads_connector",
+]
+ignore_errors = true
+
+# Third-party libs without stubs
+[[tool.mypy.overrides]]
+module = [
+    "dotenv",
+    "fpdf",
+    "fpdf.*",
+    "anthropic",
+    "httpx",
+    "flask",
+    "flask.*",
+    "requests",
+    "google.*",
+    "googleapiclient.*",
+    "google_auth_oauthlib.*",
+    "telebot",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.hypothesis]
+deriving_from = "tests"

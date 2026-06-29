@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Max Tokarev">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Platform Attribution: How to Know Which Ad Actually Drove the Sale — Max Tokarev</title>
+  <meta name="description" content="Google claims 150 conversions. Meta claims 200. Real sales = 100. Here's a practical UTM and GA4 setup to know which channel actually works.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2384cc16'/><text x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif' font-size='18' font-weight='800'>M</text></svg>">
+  <meta property="og:title" content="Cross-Platform Attribution: How to Know Which Ad Drove the Sale">
+  <meta property="og:description" content="Google says 150 conversions. Meta says 200. Real sales = 100. Practical UTM + GA4 setup for accurate cross-platform attribution.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://maxtokarev.com/article-attribution.html">
+  <meta property="og:image" content="https://maxtokarev.com/photo.jpg">
+  <meta property="og:image:width" content="480">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://maxtokarev.com/article-attribution.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cross-Platform Attribution: How to Know Which Ad Actually Drove the Sale",
+    "author": { "@type": "Person", "name": "Max Tokarev", "url": "https://maxtokarev.com" },
+    "publisher": { "@type": "Person", "name": "Max Tokarev" },
+    "image": "https://maxtokarev.com/photo.jpg",
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-06-01",
+    "description": "Practical UTM and GA4 setup for accurate cross-platform PPC attribution across Google, Meta and TikTok.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://maxtokarev.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://maxtokarev.com/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "Cross-Platform Attribution Guide"}
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to Set Up Cross-Platform PPC Attribution","step":[{"@type":"HowToStep","position":1,"name":"Add UTM parameters to all ad URLs","text":"Tag every ad with utm_source, utm_medium, utm_campaign and utm_content using each platform's dynamic parameters."},{"@type":"HowToStep","position":2,"name":"Switch GA4 to Data-Driven Attribution","text":"GA4 -> Admin -> Attribution Settings -> Data-driven. Requires 400+ conversions/month to work accurately."},{"@type":"HowToStep","position":3,"name":"Turn off Meta view-through attribution","text":"Events Manager -> Attribution settings -> set view-through window to None to remove inflated conversions."},{"@type":"HowToStep","position":4,"name":"Build a reporting dashboard","text":"Create Google Sheets pulling from GA4 (conversions by source), platform dashboards (spend) and CRM (actual orders)."},{"@type":"HowToStep","position":5,"name":"Use the attribution hierarchy","text":"CRM orders first, then GA4 DDA, then platform dashboards (directional only). Never kill a channel on platform-reported ROAS alone."}]}
+  </script>  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Meta always claim more conversions than actually happened?","acceptedAnswer":{"@type":"Answer","text":"Meta's view-through attribution counts conversions where someone only saw an ad without clicking, inflating numbers. Turn it off in Events Manager -> Attribution settings -> set view-through window to None."}},{"@type":"Question","name":"What's the simplest attribution setup for a small business?","acceptedAnswer":{"@type":"Answer","text":"UTM parameters on all ads plus GA4 with Last Non-Direct Click model. Takes 2 hours to set up and gives reliable data for $500-$3,000/month ad spend."}},{"@type":"Question","name":"How do I track phone call conversions across platforms?","acceptedAnswer":{"@type":"Answer","text":"Use a call tracking tool like CallRail or WhatConverts. These assign unique phone numbers per traffic source and report back to GA4 and each ad platform."}}]}
+  </script>  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="glow-orb glow-orb-1"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">Max<span>.</span>PPC</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="cases.html">Case Studies</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="article-hero">
+    <a href="blog.html" data-i18n-back style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text3);text-decoration:none;margin-bottom:12px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text3)'">← Back to Blog</a>
+    <div id="lang-notice"></div>
+    <div class="blog-cat strategy" style="margin-bottom:16px;">📊 Strategy</div>
+    <h1>Cross-Platform Attribution: How to Know Which Ad Actually Drove the Sale</h1>
+    <div class="article-meta-row">
+      <span class="art-author">
+        <span class="art-avatar"><img src="photo.jpg" alt="Max Tokarev" loading="lazy"></span>
+        Max Tokarev
+      </span>
+      <span>📅 January 2026</span>
+      <span>⏱ 10 min read</span>
+    </div>
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>When running Google, Meta and TikTok simultaneously, platform-reported conversions total 2–3× your actual sales due to attribution overlap. Use GA4 with Data-Driven Attribution as your source of truth. Platform dashboards are directional only. Budget decisions should be based on GA4 numbers, not what each platform claims.</p>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>Here's a scenario I see constantly: a client runs Google Ads, Meta Ads and TikTok simultaneously. Google Ads reports 180 conversions. Meta reports 240. TikTok reports 60. The actual number of orders in Shopify? 210. Every platform is double- and triple-counting.</p>
+
+    <p>Attribution is broken by design — each platform takes credit. I set up proper attribution as part of every <a href="services.html">campaign I manage</a> for every conversion it touched. The fix is building your own source of truth outside the platforms.</p>
+
+    <h2>Why Platform Attribution Lies</h2>
+
+    <p>Every ad platform uses its own attribution window and model. <a href="article-meta-cpl.html">Meta</a> defaults to a 7-day click + 1-day view window. <a href="article-pmax-2026.html">Google</a> defaults to data-driven attribution. <a href="article-tiktok-ecom.html">TikTok</a> uses a 7-day click window by default. When a customer sees a TikTok ad on Monday, clicks a Google Search ad on Wednesday, then converts on Friday — all three platforms claim the conversion.</p>
+
+    <div class="article-callout">
+      <p><strong>The only source of truth:</strong> GA4 with proper UTM parameters + your CRM or order management system. Platform dashboards are directional, not definitive.</p>
+    </div>
+
+    <h2>Step 1: Build a Proper UTM Structure</h2>
+
+    <p>UTM parameters are tags you add to your ad URLs that GA4 reads. Without them, GA4 often misattributes paid traffic as "Direct" or "Organic."</p>
+
+    <p>My standard UTM structure for each platform:</p>
+
+    <ul>
+      <li><strong>Google Search:</strong> <code>utm_source=google&utm_medium=cpc&utm_campaign=CAMPAIGN_NAME&utm_content=AD_GROUP</code></li>
+      <li><strong>Meta:</strong> <code>utm_source=meta&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{adset.name}}</code></li>
+      <li><strong>TikTok:</strong> <code>utm_source=tiktok&utm_medium=paid_social&utm_campaign=__CAMPAIGN_NAME__&utm_content=__ADGROUP_NAME__</code></li>
+      <li><strong>LinkedIn:</strong> <code>utm_source=linkedin&utm_medium=paid_social&utm_campaign=CAMPAIGN</code></li>
+    </ul>
+
+    <p>Use each platform's dynamic parameters so names auto-populate. Never use spaces in UTM values — use hyphens or underscores.</p>
+
+    <h2>Step 2: Set Up GA4 Data-Driven Attribution</h2>
+
+    <p>GA4's default attribution model is "Last click" which gives all credit to the final touchpoint. Switch to <strong>Data-driven attribution</strong> (DDA) — it uses ML to distribute credit across all touchpoints based on their actual contribution to conversion.</p>
+
+    <p>To change it: GA4 → Admin → Attribution Settings → Reporting attribution model → Data-driven. <a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener">Google's official GA4 attribution guide</a> explains how DDA distributes credit across channels.</p>
+
+    <p>DDA requires at least 400 conversions per month across all channels to work accurately. Below that, use "Position-based" (40% first touch, 40% last touch, 20% middle).</p>
+
+    <h2>Step 3: The Simple Reporting Dashboard</h2>
+
+    <p>I use a Google Sheets dashboard that pulls data from three sources:</p>
+
+    <ol>
+      <li><strong>GA4</strong> (via Looker Studio connector) — sessions, conversions, revenue by source/medium</li>
+      <li><strong>Platform dashboards</strong> — spend per platform (manually updated weekly or via API)</li>
+      <li><strong>CRM/Shopify</strong> — actual orders and revenue (the ground truth)</li>
+    </ol>
+
+    <p>The key column I track: <strong>GA4-attributed ROAS vs Platform-reported ROAS</strong>. When Meta claims 4.5× ROAS but GA4 shows 2.1× for the same period — that gap tells me Meta is over-attributing. I use GA4's number for budget decisions, not Meta's.</p>
+
+    <h2>Step 4: Use Northbeam, Triple Whale or Hyros (Optional)</h2>
+
+    <p>For e-commerce doing $50K+/month in revenue, a dedicated attribution tool is worth it. These tools build a pixel-independent view using first-party data and probabilistic matching.</p>
+
+    <ul>
+      <li><strong>Triple Whale</strong> — best for Shopify e-commerce, easy setup</li>
+      <li><strong>Northbeam</strong> — more advanced, good for multi-channel brands</li>
+      <li><strong>Hyros</strong> — popular for info products and high-ticket offers</li>
+    </ul>
+
+    <p>At $300–$500/month, these tools pay for themselves quickly if you're spending $10K+/month on ads and making budget decisions based on platform-reported ROAS.</p>
+
+    <h2>The Practical Rule for Budget Decisions</h2>
+
+    <p>When platforms disagree with GA4, I use this hierarchy:</p>
+    <ol>
+      <li><strong>CRM/Shopify</strong> — total orders (most reliable)</li>
+      <li><strong>GA4 DDA</strong> — channel-level attribution</li>
+      <li><strong>Platform dashboards</strong> — directional only, for creative and audience decisions</li>
+    </ol>
+
+    <p>Never kill a channel because its platform-reported ROAS looks bad. Check GA4 first. I've seen cases where Meta looked like a failure on its own dashboard but was the #2 channel by GA4's attribution — it was warming up audiences that converted on Google.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p><strong>Why does Meta always claim more conversions than actually happened?</strong><br>
+    Meta's view-through attribution (counting conversions where someone only saw an ad, didn't click) inflates numbers significantly. Turn off view-through attribution in your Meta settings if you want a cleaner picture. Go to Events Manager → Attribution settings → set view window to "None."</p>
+
+    <p><strong>What's the simplest attribution setup for a small business?</strong><br>
+    UTM parameters on all ads + GA4 with Last Non-Direct Click model. Takes 2 hours to set up and gives you a reliable enough picture for $500–$3,000/month ad spend.</p>
+
+    <p><strong>How do I track phone call conversions across platforms?</strong><br>
+    Use a call tracking tool like CallRail or WhatConverts. These assign unique phone numbers per traffic source and report back to GA4 and each ad platform. Essential for local businesses and legal/medical where calls are the primary conversion.</p>
+
+    <div class="related-posts">
+      <h4>Related Articles</h4>
+      <div class="related-links">
+        <a href="article-meta-cpl.html" class="related-link"><div><div class="related-link-title">How I Reduced CPL by 38% with Meta Lead Ads</div><div class="related-link-cat">📘 Meta Ads · 8 min read</div></div><span class="related-link-arrow">→</span></a>
+        <a href="article-pmax-2026.html" class="related-link"><div><div class="related-link-title">Google Performance Max in 2026: Full Setup Guide</div><div class="related-link-cat">🎯 Google Ads · 11 min read</div></div><span class="related-link-arrow">→</span></a>
+        <a href="article-tiktok-ecom.html" class="related-link"><div><div class="related-link-title">TikTok Ads for E-commerce: From $700 to $4K/mo</div><div class="related-link-cat">🎵 TikTok Ads · 9 min read</div></div><span class="related-link-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="article-divider"></div>
+
+    <div class="article-cta">
+      <h3>Running multiple platforms and can't trust your data?</h3>
+      <p>I set up proper attribution frameworks as part of every campaign I manage. You should always know which channel is actually working.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Get in touch →</a>
+        <a href="cases.html" class="btn-secondary">See multi-platform cases</a>
+      </div>
+    </div>
+
+
+    <div class="newsletter-section" style="padding:28px 32px;margin:32px 0 0;">
+      <h4 style="font-size:17px;font-weight:700;margin-bottom:6px;">Get more guides like this</h4>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">New PPC strategies every 2 weeks. No spam.</p>
+      <form class="newsletter-form" action="https://formspree.io/f/xwvdbrkl" method="POST">
+        <input type="hidden" name="_subject" value="Article Newsletter">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe →</button>
+      </form>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--border);">
+      <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;">
+        <img src="photo.jpg" alt="Max Tokarev" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy">
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:2px;">Max Tokarev</div>
+        <div style="font-size:13px;color:var(--text3);">PPC Specialist · 6 years · Google, Meta, TikTok, LinkedIn and 4 more · <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" style="color:var(--accent);">LinkedIn</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-copy">© 2026 Max Tokarev. PPC Specialist.</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="cases.html">Case Studies</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="mailto:maxtokarevads@gmail.com">Email</a>
+      <a href="https://t.me/max_ads_ppc" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script defer src="translations.js?v=2"></script>
+<script defer src="i18n.js?v=2"></script>
+<script defer src="main.js?v=2"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

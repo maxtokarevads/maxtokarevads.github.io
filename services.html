@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Max Tokarev PPC Specialist</title>
+  <meta name="description" content="PPC services across 8 platforms: Google, Meta, TikTok, LinkedIn, Telegram, Reddit, Snapchat, Bing. Audit from $300, management from $800/mo.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2384cc16'/><text x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif' font-size='18' font-weight='800'>M</text></svg>">
+  <meta property="og:title" content="Services — Max Tokarev PPC Specialist">
+  <meta property="og:description" content="PPC across 8 platforms: Google, Meta, TikTok, LinkedIn, Telegram, Reddit, Snapchat, Bing. Audit from $300, management from $800/mo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maxtokarev.com/services.html">
+  <meta property="og:image" content="https://maxtokarev.com/photo.jpg">
+  <meta property="og:image:width" content="480">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://maxtokarev.com/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "PPC Advertising Management",
+    "serviceType": "Performance Marketing",
+    "provider": { "@type": "Person", "name": "Max Tokarev", "url": "https://maxtokarev.com" },
+    "areaServed": ["US","GB","DE","EU"],
+    "description": "Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, Telegram Ads, Reddit Ads, Snapchat Ads and Bing Ads management.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "PPC Management Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "PPC Audit",
+          "description": "Full account audit, competitor analysis, growth opportunities list, video walkthrough, PDF report and 1-hour strategy call.",
+          "priceCurrency": "USD",
+          "price": "300",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "USD", "price": "300" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Campaign Management — 1 Platform",
+          "description": "Full setup or audit, daily monitoring, weekly A/B tests, bid and budget optimization, weekly performance report.",
+          "priceCurrency": "USD",
+          "price": "800",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "USD", "price": "800", "unitText": "MONTH" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Multi-Platform Management",
+          "description": "Google + Meta + TikTok unified strategy, cross-platform attribution, real-time dashboard, priority support.",
+          "priceCurrency": "USD",
+          "price": "1500",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "USD", "price": "1500", "unitText": "MONTH" }
+        }
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-full { margin-top: 60px; }
+    .service-full-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 48px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-full-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      border-radius: 4px 0 0 4px;
+    }
+    .service-full-card:hover { border-color: rgba(132,204,22,0.35); }
+
+    .sf-icon { font-size: 48px; margin-bottom: 20px; }
+    .sf-left h3 { font-size: 28px; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; }
+    .sf-left p { font-size: 16px; color: var(--text2); line-height: 1.8; margin-bottom: 28px; }
+
+    .sf-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .sf-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text2);
+    }
+    .sf-features li::before { content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .sf-metrics-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .sf-metric {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .sf-metric-val { font-size: 32px; font-weight: 800; letter-spacing: -1px; }
+    .sf-metric-val.green { color: var(--green); }
+    .sf-metric-val.blue { color: #60a5fa; }
+    .sf-metric-val.purple { color: #2dd4bf; }
+    .sf-metric-val.orange { color: #fb923c; }
+    .sf-metric-key { font-size: 13px; color: var(--text3); margin-top: 4px; }
+
+    .sf-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sf-tool {
+      padding: 6px 14px;
+      background: rgba(132,204,22,0.08);
+      border: 1px solid rgba(132,204,22,0.2);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #d9f99d;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 60px;
+    }
+    .pricing-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 36px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: rgba(132,204,22,0.4);
+      background: linear-gradient(135deg, rgba(132,204,22,0.08), rgba(101,163,13,0.04));
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -12px; left: 50%; transform: translateX(-50%);
+      padding: 4px 16px;
+      background: var(--accent);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .pricing-card:hover { transform: translateY(-4px); border-color: rgba(132,204,22,0.4); }
+    .pricing-name { font-size: 15px; font-weight: 600; color: var(--text2); margin-bottom: 8px; }
+    .pricing-price { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; }
+    .pricing-period { font-size: 13px; color: var(--text3); margin-bottom: 28px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text2);
+    }
+    .pricing-features li .check { color: var(--green); font-size: 16px; }
+
+    @media (max-width: 900px) {
+      .service-full-card { grid-template-columns: 1fr; gap: 32px; padding: 28px 24px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Max Tokarev — PPC Specialist","url":"https://maxtokarev.com"}
+  </script></head>
+<body>
+<div class="page-wrapper">
+  <div class="glow-orb glow-orb-1"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Max<span>.</span>PPC</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="cases.html">Case Studies</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-label" data-i18n="services_page.label">What I offer</div>
+    <h1 class="fade-in">PPC Advertising Services: Google, Meta, TikTok & More</h1>
+    <p class="fade-in" data-i18n="services_page.subtitle">Performance advertising with transparent analytics and measurable outcomes. I work across 8 platforms — from Google and Meta to LinkedIn, TikTok, Telegram, Reddit, Snapchat and Bing.</p>
+  </div>
+
+  <section>
+    <div class="services-full">
+
+      <!-- Google Ads -->
+      <div class="service-full-card fade-in">
+        <div class="sf-left">
+          <div class="sf-icon">🎯</div>
+          <h3>Google Ads</h3>
+          <p data-i18n="services_page.google_full_desc">Search, Performance Max, Shopping campaigns, and Display. I build full-funnel setups for e-commerce, lead generation, and mobile apps — and keep them profitable.</p>
+          <ul class="sf-features">
+            <li data-i18n="services_page.g_f1">Full account audit and restructure</li>
+            <li data-i18n="services_page.g_f2">Conversion tracking via GA4 and Google Tag Manager</li>
+            <li data-i18n="services_page.g_f3">Performance Max with margin-based product segmentation</li>
+            <li data-i18n="services_page.g_f4">Remarketing and custom audience lists</li>
+            <li data-i18n="services_page.g_f5">Smart Bidding strategies + manual adjustments</li>
+            <li data-i18n="services_page.g_f6">Weekly reporting with KPIs that matter</li>
+          </ul>
+        </div>
+        <div class="sf-right">
+          <div class="sf-metrics-row">
+            <div class="sf-metric">
+              <div class="sf-metric-val green">4.8×</div>
+              <div class="sf-metric-key">Avg. ROAS</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val blue">−42%</div>
+              <div class="sf-metric-key">CPO reduction</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val purple">+210%</div>
+              <div class="sf-metric-key">Revenue growth</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val orange">2.3%</div>
+              <div class="sf-metric-key">Avg. CVR</div>
+            </div>
+          </div>
+          <div class="sf-tools">
+            <span class="sf-tool">Search</span>
+            <span class="sf-tool">PMax</span>
+            <span class="sf-tool">Shopping</span>
+            <span class="sf-tool">Display</span>
+            <span class="sf-tool">YouTube</span>
+            <span class="sf-tool">GA4</span>
+            <span class="sf-tool">GTM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meta Ads -->
+      <div class="service-full-card fade-in">
+        <div class="sf-left">
+          <div class="sf-icon">📘</div>
+          <h3>Meta Ads</h3>
+          <p data-i18n="services_page.meta_full_desc">Facebook and Instagram advertising for lead generation and e-commerce. I build funnels, test creatives, and scale the combinations that win.</p>
+          <ul class="sf-features">
+            <li data-i18n="services_page.m_f1">Meta Pixel setup and Conversions API integration</li>
+            <li data-i18n="services_page.m_f2">Audience strategy: cold, warm, lookalike, retargeting</li>
+            <li data-i18n="services_page.m_f3">A/B tests across offer, audience, creative, and placement</li>
+            <li data-i18n="services_page.m_f4">Lead Ads and Instant Forms for lead generation</li>
+            <li data-i18n="services_page.m_f5">Catalog ads and dynamic retargeting for e-commerce</li>
+            <li data-i18n="services_page.m_f6">Budget scaling via CBO and ABO structures</li>
+          </ul>
+        </div>
+        <div class="sf-right">
+          <div class="sf-metrics-row">
+            <div class="sf-metric">
+              <div class="sf-metric-val green">−38%</div>
+              <div class="sf-metric-key">CPL reduction</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val blue">3.2×</div>
+              <div class="sf-metric-key">Lead volume</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val purple">$4</div>
+              <div class="sf-metric-key">Best CPL achieved</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val orange">4.1%</div>
+              <div class="sf-metric-key">Avg. CTR</div>
+            </div>
+          </div>
+          <div class="sf-tools">
+            <span class="sf-tool">Facebook</span>
+            <span class="sf-tool">Instagram</span>
+            <span class="sf-tool">Meta Pixel</span>
+            <span class="sf-tool">CAPI</span>
+            <span class="sf-tool">Lead Ads</span>
+            <span class="sf-tool">Catalog</span>
+            <span class="sf-tool">CBO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TikTok Ads -->
+      <div class="service-full-card fade-in">
+        <div class="sf-left">
+          <div class="sf-icon">🎵</div>
+          <h3>TikTok Ads</h3>
+          <p data-i18n="services_page.tiktok_full_desc">Advertising on TikTok for brands targeting younger audiences. I work with UGC formats, Spark Ads, and complete conversion funnels — not just awareness.</p>
+          <ul class="sf-features">
+            <li data-i18n="services_page.t_f1">TikTok Pixel setup and event tracking</li>
+            <li data-i18n="services_page.t_f2">In-Feed Ads, Spark Ads, TopView, Brand Takeover</li>
+            <li data-i18n="services_page.t_f3">UGC content strategy and hook testing</li>
+            <li data-i18n="services_page.t_f4">A/B testing of formats, hooks, and CTAs</li>
+            <li data-i18n="services_page.t_f5">Optimization for app installs and purchases</li>
+            <li data-i18n="services_page.t_f6">Scaling via Smart+ Campaigns</li>
+          </ul>
+        </div>
+        <div class="sf-right">
+          <div class="sf-metrics-row">
+            <div class="sf-metric">
+              <div class="sf-metric-val green">2.8%</div>
+              <div class="sf-metric-key">Avg. CTR</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val blue">−55%</div>
+              <div class="sf-metric-key">CPI reduction</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val purple">12K</div>
+              <div class="sf-metric-key">Installs / month</div>
+            </div>
+            <div class="sf-metric">
+              <div class="sf-metric-val orange">68%</div>
+              <div class="sf-metric-key">View rate</div>
+            </div>
+          </div>
+          <div class="sf-tools">
+            <span class="sf-tool">In-Feed</span>
+            <span class="sf-tool">Spark Ads</span>
+            <span class="sf-tool">TopView</span>
+            <span class="sf-tool">UGC</span>
+            <span class="sf-tool">Smart+</span>
+            <span class="sf-tool">TikTok Pixel</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Additional Platforms -->
+    <div style="margin-top: 40px;">
+      <div class="section-label" style="margin-bottom: 20px;" data-i18n="services_page.also">Also available</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+
+        <div class="service-card fade-in" style="padding: 24px;">
+          <div class="service-icon" style="width:40px;height:40px;font-size:18px;margin-bottom:16px;">💼</div>
+          <h3 style="font-size:16px;margin-bottom:8px;">LinkedIn Ads</h3>
+          <p style="font-size:13px;margin-bottom:12px;" data-i18n="services_page.linkedin_desc">B2B lead gen, Sponsored Content, InMail campaigns. Best for SaaS, recruitment and enterprise.</p>
+          <div class="service-tags">
+            <span class="tag">B2B</span><span class="tag">InMail</span><span class="tag">Lead Gen</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in fade-in-delay-1" style="padding: 24px;">
+          <div class="service-icon" style="width:40px;height:40px;font-size:18px;margin-bottom:16px;">✈️</div>
+          <h3 style="font-size:16px;margin-bottom:8px;">Telegram Ads</h3>
+          <p style="font-size:13px;margin-bottom:12px;" data-i18n="services_page.telegram_desc">Sponsored messages in public channels. Works well for CIS, EU markets and crypto/fintech niches.</p>
+          <div class="service-tags">
+            <span class="tag">CPM</span><span class="tag">Channels</span><span class="tag">CIS / EU</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in fade-in-delay-2" style="padding: 24px;">
+          <div class="service-icon" style="width:40px;height:40px;font-size:18px;margin-bottom:16px;">🤖</div>
+          <h3 style="font-size:16px;margin-bottom:8px;">Reddit Ads</h3>
+          <p style="font-size:13px;margin-bottom:12px;" data-i18n="services_page.reddit_desc">Community-level targeting. Ideal for tech products, gaming and brands targeting niche enthusiasts.</p>
+          <div class="service-tags">
+            <span class="tag">Subreddits</span><span class="tag">Tech</span><span class="tag">Gaming</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" style="padding: 24px;">
+          <div class="service-icon" style="width:40px;height:40px;font-size:18px;margin-bottom:16px;">👻</div>
+          <h3 style="font-size:16px;margin-bottom:8px;">Snapchat Ads</h3>
+          <p style="font-size:13px;margin-bottom:12px;" data-i18n="services_page.snapchat_desc">Story Ads, AR Lenses and Dynamic Ads. Reaches 13–34 audience with lower CPMs than Meta.</p>
+          <div class="service-tags">
+            <span class="tag">Stories</span><span class="tag">AR Lenses</span><span class="tag">Gen Z</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in fade-in-delay-1" style="padding: 24px;">
+          <div class="service-icon" style="width:40px;height:40px;font-size:18px;margin-bottom:16px;">🔷</div>
+          <h3 style="font-size:16px;margin-bottom:8px;">Bing Ads</h3>
+          <p style="font-size:13px;margin-bottom:12px;" data-i18n="services_page.bing_desc">Microsoft Search and Shopping. Lower CPC than Google, strong reach with 35+ professional audience.</p>
+          <div class="service-tags">
+            <span class="tag">Search</span><span class="tag">Shopping</span><span class="tag">Lower CPC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRICING -->
+  <section>
+    <div class="section-label" data-i18n="services_page.pricing_label">Pricing</div>
+    <h2 class="section-title fade-in" data-i18n="services_page.pricing_title">How we can work together</h2>
+    <p class="section-sub fade-in" data-i18n="services_page.pricing_sub">Pick the format that fits your project. All details are discussed individually.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card fade-in">
+        <div class="pricing-name" data-i18n="services_page.audit_name">Audit</div>
+        <div class="pricing-price">from $300</div>
+        <div class="pricing-period" data-i18n="services_page.audit_period">one-time</div>
+        <ul class="pricing-features">
+          <li data-i18n-html="services_page.a_f1"><span class="check">✓</span> Full account audit</li>
+          <li data-i18n-html="services_page.a_f2"><span class="check">✓</span> Competitor analysis</li>
+          <li data-i18n-html="services_page.a_f3"><span class="check">✓</span> Growth opportunities list</li>
+          <li data-i18n-html="services_page.a_f4"><span class="check">✓</span> Video walkthrough + PDF report</li>
+          <li data-i18n-html="services_page.a_f5"><span class="check">✓</span> 1-hour strategy call</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="display:block;text-align:center;" data-i18n="services_page.audit_btn">Get started →</a>
+      </div>
+
+      <div class="pricing-card featured fade-in fade-in-delay-1">
+        <div class="pricing-badge" data-i18n="services_page.popular_badge">Most popular</div>
+        <div class="pricing-name" data-i18n="services_page.mgmt_name">Campaign Management</div>
+        <div class="pricing-price">from $800</div>
+        <div class="pricing-period" data-i18n="services_page.mgmt_period">per month / 1 platform</div>
+        <ul class="pricing-features">
+          <li data-i18n-html="services_page.c_f1"><span class="check">✓</span> Setup or audit included</li>
+          <li data-i18n-html="services_page.c_f2"><span class="check">✓</span> Daily monitoring</li>
+          <li data-i18n-html="services_page.c_f3"><span class="check">✓</span> Weekly A/B tests</li>
+          <li data-i18n-html="services_page.c_f4"><span class="check">✓</span> Bid and budget optimization</li>
+          <li data-i18n-html="services_page.c_f5"><span class="check">✓</span> Weekly performance report</li>
+          <li data-i18n-html="services_page.c_f6"><span class="check">✓</span> Async support on weekdays</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="display:block;text-align:center;" data-i18n="services_page.talk_btn">Let's talk →</a>
+      </div>
+
+      <div class="pricing-card fade-in fade-in-delay-2">
+        <div class="pricing-name" data-i18n="services_page.multi_name">Multi-Platform</div>
+        <div class="pricing-price">from $1,500</div>
+        <div class="pricing-period" data-i18n="services_page.multi_period">per month / all 3 platforms</div>
+        <ul class="pricing-features">
+          <li data-i18n-html="services_page.mp_f1"><span class="check">✓</span> Google + Meta + TikTok</li>
+          <li data-i18n-html="services_page.mp_f2"><span class="check">✓</span> Unified strategy and funnel</li>
+          <li data-i18n-html="services_page.mp_f3"><span class="check">✓</span> Cross-platform attribution</li>
+          <li data-i18n-html="services_page.mp_f4"><span class="check">✓</span> Real-time dashboard</li>
+          <li data-i18n-html="services_page.mp_f5"><span class="check">✓</span> Priority support</li>
+          <li data-i18n-html="services_page.mp_f6"><span class="check">✓</span> Quarterly strategy session</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="display:block;text-align:center;" data-i18n="services_page.talk_btn">Let's talk →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding-top:0;">
+    <div class="section-label" style="margin-bottom:24px;" data-i18n="services_page.testimonials_label">What clients say</div>
+    <div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+      <div class="testimonial-card" style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius2);padding:32px;">
+        <p style="font-size:16px;line-height:1.7;color:var(--text);margin-bottom:24px;">"Max restructured our Meta campaigns from scratch. CPL dropped from $6.50 to $4 within 3 weeks, and lead volume tripled. He doesn't just run ads — he understands the full funnel."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:#000;font-size:15px;">V</div>
+          <div>
+            <div style="font-weight:700;font-size:14px;">Victoria Bondarenko</div>
+            <div style="font-size:13px;color:var(--text3);">Digital Marketing Manager · <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener" style="color:var(--accent);">View on LinkedIn →</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius2);padding:32px;">
+        <p style="font-size:16px;line-height:1.7;color:var(--text);margin-bottom:24px;">"Best hire I've made in my 6 years as a CMO. Max set up cross-platform attribution we never had before. We finally knew which channel drove revenue — and scaled accordingly."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:#000;font-size:15px;">D</div>
+          <div>
+            <div style="font-weight:700;font-size:14px;">Dmitriy Vihrov</div>
+            <div style="font-size:13px;color:var(--text3);">CMO, B2B SaaS · <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener" style="color:var(--accent);">View on LinkedIn →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section fade-in">
+    <h2 data-i18n="services_page.not_sure">Not sure which fits?</h2>
+    <p data-i18n="services_page.not_sure_sub">Drop me a message or book a free 30-min call — I'll tell you exactly what makes sense for your project.</p>
+    <a href="contact.html" class="btn-primary">Send a message →</a>
+  </div>
+
+  <footer>
+    <div class="footer-copy">© 2026 Max Tokarev. PPC Specialist.</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="cases.html">Case Studies</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="mailto:maxtokarevads@gmail.com">Email</a>
+      <a href="https://t.me/max_ads_ppc" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script defer src="translations.js?v=2"></script>
+<script defer src="i18n.js?v=2"></script>
+<script defer src="main.js?v=2"></script>
+</body>
+</html>
+
+

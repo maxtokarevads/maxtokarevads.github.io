@@ -1,0 +1,43 @@
+.env
+.env.local
+.env.*.local
+.secrets/
+.venv/
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+# Runtime / process files
+*.pid
+bot_state.db
+bot_state.db-shm
+bot_state.db-wal
+# Logs
+*.log
+bot_out.log
+bot_err.log
+bot_run.log
+bot_output.log
+bot_error.log
+bot_stderr.txt
+bot_stdout.txt
+# API credentials & tokens — NEVER commit
+google_client_secret.json
+gsc_token.json
+# Internal vault (knowledge base, private strategy docs)
+vault/
+# Local Claude config & memory
+.claude/
+# Client data & outputs
+meta_ads_emails.csv
+masych_dental_final.txt
+rewrite_result.txt
+test_report.pdf
+# Scratchpad / temp
+*.tmp
+# Scripts contain hardcoded credentials — keep off public repo
+scripts/
