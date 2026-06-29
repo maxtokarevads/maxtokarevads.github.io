@@ -15,6 +15,11 @@
   <meta property="og:image:height" content="640">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://maxtokarev.com/contact.html">
+  <link rel="alternate" hreflang="en" href="https://maxtokarev.com/contact.html">
+  <link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/contact.html">
+  <link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
@@ -119,7 +124,7 @@
       <li><a href="resources.html">Resources</a></li>
       <li><a href="contact.html" class="nav-cta active">Get in Touch</a></li>
     </ul>
-    <div class="lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="uk">UA</button><button class="lang-btn" data-lang="ru">RU</button></div>
+    <div class="lang-switcher"><a class="lang-btn active" href="contact.html" data-lang="en">EN</a><a class="lang-btn" href="uk/contact.html" data-lang="uk">UA</a><a class="lang-btn" href="ru/contact.html" data-lang="ru">RU</a></div>
     <div class="burger"><span></span><span></span><span></span></div>
   </nav>
 
@@ -291,18 +296,25 @@
   </section>
 
   <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Max<span>.</span>PPC</a>
+        <p class="footer-tagline">Performance ads across 8 platforms — Google, Meta, TikTok, LinkedIn &amp; more.</p>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:maxtokarevads@gmail.com">Email</a>
+        <a href="https://t.me/max_ads_ppc" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
     <div class="footer-copy">© 2026 Max Tokarev. PPC Specialist.</div>
-    <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="cases.html">Case Studies</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="mailto:maxtokarevads@gmail.com">Email</a>
-      <a href="https://t.me/max_ads_ppc" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://www.linkedin.com/in/maxtokarevads/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
   </footer>
 </div>
 <button class="back-to-top" aria-label="Back to top">↑</button>
@@ -339,6 +351,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 </script>
+<script>try{localStorage.setItem("ppc_lang","en")}catch(e){}</script>
 </body>
 </html>
 

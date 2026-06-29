@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://maxtokarev.com/uk/agent.html" rel="canonical"/><link href="https://maxtokarev.com/agent.html" hreflang="en" rel="alternate"/><link href="https://maxtokarev.com/uk/agent.html" hreflang="uk" rel="alternate"/><link href="https://maxtokarev.com/ru/agent.html" hreflang="ru" rel="alternate"/><link href="https://maxtokarev.com/agent.html" hreflang="x-default" rel="alternate"/>
+<title>AI Ads Агент — Google & Meta Можливості | Макс Токарев</title>
+<meta content="AI-помічник для реклами: планування кампаній, діагностика, тексти оголошень, ретаргетинг, A/B тести та дослідження аудиторій." name="description"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='8' fill='%2384cc16'/&gt;&lt;text x='16' y='22' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif' font-size='18' font-weight='800'&gt;M&lt;/text&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<meta content="AI Ads Агент — Google & Meta Можливості | Макс Токарев" property="og:title"/>
+<meta content="AI-помічник для реклами: планування кампаній, діагностика, тексти оголошень, ретаргетинг, A/B тести та дослідження аудиторій." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://maxtokarev.com/uk/agent.html" property="og:url"/>
+<meta content="https://maxtokarev.com/photo.jpg" property="og:image"/>
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet"/>
+<style>
+    /* ── PAGE-SPECIFIC OVERRIDES ── */
+    .agent-hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .agent-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(132,204,22,0.08);
+      border: 1px solid rgba(132,204,22,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .agent-badge .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+      animation: blink 2s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .agent-hero h1 {
+      font-size: clamp(28px, 4.5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .agent-hero h1 .grad {
+      background: linear-gradient(135deg, #84cc16, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .agent-hero p {
+      font-size: 16px;
+      color: var(--text2);
+      max-width: 580px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* stats row */
+    .agent-stats {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      max-width: 560px;
+      margin: 0 auto 56px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      overflow: hidden;
+      background: var(--bg3);
+    }
+    .a-stat {
+      flex: 1 1 120px;
+      padding: 20px 16px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .a-stat:last-child { border-right: none; }
+    .a-stat-num { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
+    .a-stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-top: 4px; }
+
+    /* ── PLATFORM HEADER ── */
+    .platform-hd {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .platform-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .pi-google { background: linear-gradient(135deg,#4285F4 0%,#34A853 100%); }
+    .pi-meta   { background: linear-gradient(135deg,#0866FF 0%,#a855f7 100%); }
+    .platform-hd h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+    .platform-hd p  { font-size: 13px; color: var(--text2); margin-top: 2px; }
+    .platform-tag {
+      margin-left: auto;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 5px 13px; border-radius: 100px;
+    }
+    .pt-google { background: rgba(66,133,244,0.1); color: #4285F4; border: 1px solid rgba(66,133,244,0.25); }
+    .pt-meta   { background: rgba(8,102,255,0.1);  color: #5b9aff; border: 1px solid rgba(8,102,255,0.25); }
+
+    /* ── SKILLS GRID ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── SKILL CARD ── */
+    .sk-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .sk-card:hover {
+      border-color: rgba(132,204,22,0.3);
+      transform: translateY(-2px);
+    }
+    .sk-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .sk-card:hover::after { opacity: 1; }
+
+    .sk-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .sk-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(132,204,22,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .sk-title { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+    .sk-sub   { font-size: 12px; color: var(--text3); }
+
+    .sk-cmd {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-family: 'SF Mono','Fira Code',monospace;
+      color: var(--text3);
+      margin-bottom: 16px;
+    }
+    .sk-cmd .slash { color: var(--accent); }
+
+    .sk-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sk-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.45;
+    }
+    .sk-list li::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .sk-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 7px; border-radius: 4px;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .tag-ecom  { background: rgba(52,168,83,0.14);  color: #34A853; }
+    .tag-b2b   { background: rgba(251,188,4,0.14);  color: #FBBC04; }
+    .tag-bofu  { background: rgba(239,68,68,0.14);  color: #ef4444; }
+    .tag-video { background: rgba(168,85,247,0.14); color: #a855f7; }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 56px 0 0;
+    }
+
+    /* ── BENCHMARKS ── */
+    .bench-section {
+      margin-top: 48px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 28px 32px;
+    }
+    .bench-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text3);
+      margin-bottom: 20px;
+    }
+    .bench-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .bench-pill {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      flex: 1 1 140px;
+    }
+    .bench-plat { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 5px; }
+    .bench-name { font-size: 12px; color: var(--text2); margin-bottom: 4px; }
+    .bench-val  { font-size: 16px; font-weight: 800; color: var(--accent); }
+
+    /* ── CTA BLOCK ── */
+    .agent-cta {
+      margin-top: 64px;
+      text-align: center;
+      padding: 56px 32px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      position: relative;
+      overflow: hidden;
+    }
+    .agent-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 500px 200px at 50% 0%, rgba(132,204,22,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .agent-cta h2 { font-size: clamp(20px,3vw,32px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .agent-cta p  { font-size: 15px; color: var(--text2); max-width: 480px; margin: 0 auto 28px; line-height: 1.65; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 640px) {
+      .agent-stats { flex-direction: column; }
+      .a-stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .a-stat:last-child { border-bottom: none; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .bench-section { padding: 20px; }
+      .platform-hd { flex-wrap: wrap; }
+      .platform-tag { margin-left: 0; }
+    }
+  </style>
+<script>try{localStorage.setItem("ppc_lang","uk")}catch(e){}</script>
+</head>
+<body>
+<div class="page-wrapper">
+<div class="glow-orb glow-orb-1"></div>
+<div class="glow-orb glow-orb-2"></div>
+<!-- NAV -->
+<nav>
+<a class="nav-logo" href="../index.html">Max<span>.</span>PPC</a>
+<ul class="nav-links">
+<li><a href="../index.html">Головна</a></li>
+<li><a href="../services.html">Послуги</a></li>
+<li><a href="../cases.html">Кейси</a></li>
+<li><a href="../blog.html">Блог</a></li>
+<li><a href="../resources.html">Ресурси</a></li>
+<li><a class="nav-cta" href="../contact.html">Зв'язатися</a></li>
+</ul>
+<div class="lang-switcher"><a class="lang-btn" data-lang="en" href="../agent.html">EN</a><a class="lang-btn active" data-lang="uk" href="agent.html">UA</a><a class="lang-btn" data-lang="ru" href="../ru/agent.html">RU</a></div>
+<div class="burger"><span></span><span></span><span></span></div>
+</nav>
+<!-- HERO -->
+<section class="agent-hero container">
+<div class="agent-badge"><span class="dot"></span> AI-Powered · 2026 Benchmarks</div>
+<h1>Your AI Ads Agent for<br/><span class="grad">Google &amp; Meta</span></h1>
+<p>6 specialised modes per platform — from campaign planning to ad copy, retargeting strategy and A/B testing. Built on 2026 benchmarks, tailored to your business type.</p>
+<div class="agent-stats">
+<div class="a-stat">
+<div class="a-stat-num">12</div>
+<div class="a-stat-label">Skill Modules</div>
+</div>
+<div class="a-stat">
+<div class="a-stat-num">2</div>
+<div class="a-stat-label">Platforms</div>
+</div>
+<div class="a-stat">
+<div class="a-stat-num">6</div>
+<div class="a-stat-label">Modes Each</div>
+</div>
+</div>
+</section>
+<!-- ════════════ GOOGLE ADS ════════════ -->
+<section class="container" style="padding-top:0; padding-bottom:0;">
+<div class="platform-hd fade-in">
+<div class="platform-icon pi-google">🔍</div>
+<div>
+<h2>Google Ads</h2>
+<p>Search · Performance Max · Shopping · Display · YouTube · App</p>
+</div>
+<span class="platform-tag pt-google">6 modes</span>
+</div>
+<div class="skills-grid">
+<!-- PLAN -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">📋</div>
+<div>
+<div class="sk-title">Plan — Campaign Setup</div>
+<div class="sk-sub">Full launch plan: structure, bids, targeting, KPIs</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>plan · google</div>
+<ul class="sk-list">
+<li>Campaign type selection: Search / PMax / Shopping / Display / YouTube / App</li>
+<li>Campaign → Ad Group → Ad structure with split logic</li>
+<li>Bidding strategy: tCPA / tROAS / Maximize Clicks with conversion thresholds</li>
+<li>Targeting: keywords + audiences + demographics + device adjustments</li>
+<li><span class="sk-tag tag-b2b">B2B</span> Offline conversions, GCLID capture, Smart Bidding on MQL/SQL</li>
+<li><span class="sk-tag tag-ecom">Ecom</span> PMax Asset Groups, Shopping feed setup, brand protection</li>
+<li>Learning phase: min conversions, freeze windows, tracking checklist</li>
+</ul>
+</div>
+<!-- ANALYZE -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🔬</div>
+<div>
+<div class="sk-title">Analyze — Campaign Diagnostics</div>
+<div class="sk-sub">Root cause analysis + prioritised action plan</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>analyze · google</div>
+<ul class="sk-list">
+<li>Metrics: CTR, CPC, CPA, ROAS, Quality Score, Impression Share</li>
+<li>Detects: low QS, Learning Permanent, PMax brand cannibalization</li>
+<li>Compared to 2026 benchmarks: Search CTR ≥3%, QS ≥7, IS ≥70%</li>
+<li>Lost IS split: budget vs rank — separate diagnosis for each</li>
+<li>Performance forecast after recommendations</li>
+<li>Confidence level: High / Medium / Low per recommendation</li>
+<li>Free-text mode — works without structured metrics</li>
+</ul>
+</div>
+<!-- COPY -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">✍️</div>
+<div>
+<div class="sk-title">Copy — Ad Copywriting</div>
+<div class="sk-sub">RSA-compliant copy with character counts and assets</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>copy · google</div>
+<ul class="sk-list">
+<li>15 headlines ≤30 chars: keyword / USP / CTA / urgency / brand groups</li>
+<li>4 descriptions ≤90 chars: pain→solution, benefit+CTA, proof, offer</li>
+<li>Pinning recommendations for positions 1 and 3</li>
+<li>4 Sitelinks + 4 Callouts + 2 Structured Snippets</li>
+<li>Dynamic Keyword Insertion examples {`{Keyword:Default}`}</li>
+<li>Character count [XX chars] for every element + final checklist</li>
+</ul>
+</div>
+<!-- RETARGETING -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🎯</div>
+<div>
+<div class="sk-title">Retargeting — Remarketing Strategy</div>
+<div class="sk-sub">RLSA · Display · Customer Match · Dynamic Ads</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>retargeting · google</div>
+<ul class="sk-list">
+<li>RLSA bid modifiers by segment: all visitors +20% → cart abandoners +80%</li>
+<li>Display remarketing: sequential, frequency cap 5–7 impressions/day</li>
+<li>Customer Match from CRM (min. 1,000 matches) for upsell / exclusion</li>
+<li><span class="sk-tag tag-ecom">Ecom</span> Dynamic Remarketing — shows the exact product viewed</li>
+<li>Funnel strategy: MOFU (social proof) → BOFU (urgency + offer)</li>
+<li>Audience membership windows: 7 / 14 / 30 / 90 days per segment</li>
+</ul>
+</div>
+<!-- A/B TEST -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">⚗️</div>
+<div>
+<div class="sk-title">A/B Test — Experiment Design</div>
+<div class="sk-sub">Ad Variations · Drafts &amp; Experiments</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>ab_test · google</div>
+<ul class="sk-list">
+<li>Ad Variations for RSA headline tests (50/50 auto-split)</li>
+<li>Drafts &amp; Experiments: bid strategy, targeting, PMax vs Search</li>
+<li>Sample size formula: n = 16×p×(1−p)/δ² at 95% confidence</li>
+<li>Ready-made traffic table for CVR 1–10% at MDE 10/20/30%</li>
+<li>5 prioritised tests: bid → headline → match type → landing page → PMax</li>
+<li>Rules: 1 variable, no early stopping, hypothesis→result log</li>
+</ul>
+</div>
+<!-- RESEARCH -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🔎</div>
+<div>
+<div class="sk-title">Research — Keyword &amp; Audience</div>
+<div class="sk-sub">Keyword universe · Audiences · Competitors</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>research · google</div>
+<ul class="sk-list">
+<li>Keyword universe by intent: BOFU / MOFU / TOFU with CPC estimates</li>
+<li>Match type strategy + 7 categories of negative keywords to mine</li>
+<li>SKAG vs STAG: when to use each approach</li>
+<li>In-market, custom intent and affinity audience layering</li>
+<li>Competitor analysis: Auction Insights + Transparency Center</li>
+<li>Output: keyword CSV, negative list, audience map, competitor summary</li>
+</ul>
+</div>
+</div>
+</section>
+<hr class="section-divider" style="margin:48px 0 0;"/>
+<!-- ════════════ META ADS ════════════ -->
+<section class="container" style="padding-top:48px; padding-bottom:0;">
+<div class="platform-hd fade-in">
+<div class="platform-icon pi-meta">📘</div>
+<div>
+<h2>Meta Ads</h2>
+<p>Facebook · Instagram · Reels · Stories · Lead Forms</p>
+</div>
+<span class="platform-tag pt-meta">6 modes</span>
+</div>
+<div class="skills-grid">
+<!-- PLAN -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">📋</div>
+<div>
+<div class="sk-title">Plan — Campaign Setup</div>
+<div class="sk-sub">Objective · structure · formats · bidding</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>plan · meta</div>
+<ul class="sk-list">
+<li>Objective selection: Awareness / Consideration / Conversion / Catalog Sales</li>
+<li><span class="sk-tag tag-ecom">Ecom</span> Advantage+ Shopping Campaign (ASC)</li>
+<li>Campaign → Ad Set → Ad structure, CBO vs ABO with decision logic</li>
+<li>Targeting: Core / Custom Audiences / Lookalike 1–7% / Advantage+</li>
+<li>Formats: Image, Video, Carousel (10 cards), Collection, Stories/Reels, Lead Form</li>
+<li>Bidding: Lowest Cost → Cost Cap → ROAS Target</li>
+<li>Creative cadence: 10–20 new assets/week, rotation at frequency &gt;3–4</li>
+</ul>
+</div>
+<!-- ANALYZE -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🔬</div>
+<div>
+<div class="sk-title">Analyze — Campaign Diagnostics</div>
+<div class="sk-sub">Funnel · creative fatigue · attribution · Learning</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>analyze · meta</div>
+<ul class="sk-list">
+<li>Metrics: CPM, CTR, CPA, ROAS, CVR, Frequency, Hook Rate, Video CR</li>
+<li>Creative fatigue detection: Frequency &gt;3 + CTR drop + rising CPM</li>
+<li>Learning Limited: causes and how to resolve (budget / events / structure)</li>
+<li>Attribution inflation: Meta vs GA4 gap — when not to trust platform ROAS</li>
+<li>Funnel breakdown: CPM → CTR → CVR → ROAS (where it breaks)</li>
+<li>2026 benchmarks: Link CTR ≥0.9%, Hook Rate ≥25%, Frequency ≤5/7d</li>
+<li>Free-text mode — works without structured metrics</li>
+</ul>
+</div>
+<!-- COPY -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">✍️</div>
+<div>
+<div class="sk-title">Copy — Ad Copywriting</div>
+<div class="sk-sub">3 hook variants · TOFU / MOFU / BOFU</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>copy · meta</div>
+<ul class="sk-list">
+<li>Variant 1 — Hook: <strong>Pain / Problem</strong> (open with the audience's pain)</li>
+<li>Variant 2 — Hook: <strong>Number / Result</strong> (specific stat or outcome)</li>
+<li>Variant 3 — Hook: <strong>Question / Intrigue</strong> (a "yes" they want to say)</li>
+<li>Hard limits: Primary Text ≤125 / Headline ≤40 / Description ≤30 chars</li>
+<li>Funnel stage adjusts tone: awareness vs value demo vs urgency/offer</li>
+<li><span class="sk-tag tag-video">Video</span> First-second script, subtitle ≤8 words, audio hook</li>
+<li>Carousel: sequential story — hook → benefits → CTA on last card</li>
+</ul>
+</div>
+<!-- RETARGETING -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🎯</div>
+<div>
+<div class="sk-title">Retargeting — Remarketing Strategy</div>
+<div class="sk-sub">Pixel · DPA · Customer List · Lookalike</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>retargeting · meta</div>
+<ul class="sk-list">
+<li>Pixel audiences: ViewContent / AddToCart / InitiateCheckout / Purchase 7–180d</li>
+<li>Video engagement: 25 / 50 / 75 / 95% completion for different windows</li>
+<li>Customer List from CRM (min. 1,000 matches) → segments + LAL seed</li>
+<li><span class="sk-tag tag-ecom">Ecom</span> DPA: broad remarketing / exact product / cross-sell</li>
+<li>Funnel: MOFU (carousel + testimonial) → <span class="sk-tag tag-bofu">BOFU</span> (urgency ≤7 freq/7d)</li>
+<li>Post-purchase upsell / cross-sell campaign for repeat buyers</li>
+</ul>
+</div>
+<!-- A/B TEST -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">⚗️</div>
+<div>
+<div class="sk-title">A/B Test — Experiment Design</div>
+<div class="sk-sub">Meta Experiments · Holdout · ABO vs CBO</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>ab_test · meta</div>
+<ul class="sk-list">
+<li>Meta Experiments: Creative / Audience / Placement / Budget Strategy</li>
+<li>Holdout Test: 10–15% sees no ads — measures true incremental lift</li>
+<li>ABO vs CBO: 14-day test with equal total budget</li>
+<li>Tests: format, audience (interests vs Advantage+ vs LAL vs broad)</li>
+<li>Sample size for each branch: ≥50 conversion events per 7 days</li>
+<li>Creative rotation: pause ad if CTR &lt;0.5% after ≥500 impressions</li>
+</ul>
+</div>
+<!-- RESEARCH -->
+<div class="sk-card fade-in">
+<div class="sk-head">
+<div class="sk-icon">🔎</div>
+<div>
+<div class="sk-title">Research — Audience &amp; Strategy</div>
+<div class="sk-sub">Audience architecture · LAL seeds · Ad Library</div>
+</div>
+</div>
+<div class="sk-cmd"><span class="slash">/</span>research · meta</div>
+<ul class="sk-list">
+<li>Targeting spectrum: Detailed → Broad → Advantage+ → Custom → LAL</li>
+<li>Interest discovery: direct / adjacent / behavioural / competitor / publication</li>
+<li>Audience sizing guide: &lt;100K (too narrow) → &gt;50M (Advantage+ only)</li>
+<li>LAL seed hierarchy: buyers → VIP top 20% LTV → video 75%+ completers</li>
+<li>LAL size matrix: 1% (quality) → 3–5% (scale) → 5–10% (max reach)</li>
+<li>Competitor intel via Meta Ad Library — formats, copy angles, CTA patterns</li>
+<li>Output: 4–6 Ad Set test matrix + 30-day targeting roadmap</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ════════════ BENCHMARKS ════════════ -->
+<section class="container" style="padding-top:0; padding-bottom:0;">
+<div class="bench-section fade-in">
+<div class="bench-title">Built-in 2026 Benchmarks</div>
+<div class="bench-row">
+<div class="bench-pill">
+<div class="bench-plat">Google · Search</div>
+<div class="bench-name">CTR target</div>
+<div class="bench-val">≥ 3–5%</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Google · Search</div>
+<div class="bench-name">Quality Score</div>
+<div class="bench-val">≥ 7 / 10</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Google · Search</div>
+<div class="bench-name">Impression Share</div>
+<div class="bench-val">≥ 70%</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Google · Ecom</div>
+<div class="bench-name">ROAS target</div>
+<div class="bench-val">≥ 3×</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Google · Learning</div>
+<div class="bench-name">Min. conversions</div>
+<div class="bench-val">30–50 / mo</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Meta · Feed</div>
+<div class="bench-name">Link CTR</div>
+<div class="bench-val">0.9–1.8%</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Meta · Video</div>
+<div class="bench-name">Hook Rate (3s)</div>
+<div class="bench-val">≥ 25%</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Meta · Auction</div>
+<div class="bench-name">Normal CPM range</div>
+<div class="bench-val">$8–18</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Meta · Audience</div>
+<div class="bench-name">Frequency cap</div>
+<div class="bench-val">≤ 3 / 7d</div>
+</div>
+<div class="bench-pill">
+<div class="bench-plat">Meta · Learning</div>
+<div class="bench-name">Min. events to exit</div>
+<div class="bench-val">50 / 7d</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ════════════ CTA ════════════ -->
+<section class="container" style="padding-top:0; padding-bottom:80px;">
+<div class="agent-cta fade-in">
+<h2>Want this agent working on your campaigns?</h2>
+<p>I manage Google and Meta Ads with the same framework this agent is built on — 2026 benchmarks, structured diagnostics, and creative testing built into every step.</p>
+<div class="cta-btns">
+<a class="btn-primary" href="../contact.html">Let's talk →</a>
+<a class="btn-secondary" href="../services.html">View services</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="footer-logo" href="../index.html">Max<span>.</span>PPC</a>
+<p class="footer-tagline">Performance ads across 8 platforms — Google, Meta, TikTok, LinkedIn &amp; more.</p>
+</div>
+<div class="footer-links">
+<a href="../services.html">Послуги</a>
+<a href="../cases.html">Кейси</a>
+<a href="../blog.html">Блог</a>
+<a href="../resources.html">Ресурси</a>
+<a href="../contact.html">Контакти</a>
+</div>
+<div class="footer-socials">
+<a href="mailto:maxtokarevads@gmail.com">Email</a>
+<a href="https://t.me/max_ads_ppc" rel="noopener" target="_blank">Telegram</a>
+<a href="https://www.linkedin.com/in/maxtokarevads/" rel="noopener" target="_blank">LinkedIn</a>
+</div>
+</div>
+<div class="footer-copy">© 2026 Max Tokarev. PPC-спеціаліст.</div>
+</footer>
+</div>
+<button aria-label="Back to top" class="back-to-top">↑</button>
+<script defer="" src="../translations.js?v=2"></script>
+<script defer="" src="../i18n.js?v=2"></script>
+<script defer="" src="../main.js?v=2"></script>
+</body>
+</html>

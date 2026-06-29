@@ -5,6 +5,15 @@ if (burger && navLinks) {
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 }
 
+// Inject lang-switcher clone into mobile dropdown
+const langSwitcher = document.querySelector('.lang-switcher');
+if (langSwitcher && navLinks) {
+  const li = document.createElement('li');
+  li.className = 'nav-lang-mobile';
+  li.innerHTML = langSwitcher.innerHTML;
+  navLinks.appendChild(li);
+}
+
 // Active nav link
 const currentPage = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(a => {

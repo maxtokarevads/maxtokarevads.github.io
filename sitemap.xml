@@ -1,10 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://maxtokarev.com/</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://maxtokarev.com/services.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://maxtokarev.com/cases.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://maxtokarev.com/blog.html</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://maxtokarev.com/resources.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ══ HOME ══ -->
+  <url>
+    <loc>https://maxtokarev.com/</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/"/>
+  </url>
+
+  <!-- ══ SERVICES ══ -->
+  <url>
+    <loc>https://maxtokarev.com/services.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/services.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/services.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/services.html"/>
+  </url>
+
+  <!-- ══ CASES ══ -->
+  <url>
+    <loc>https://maxtokarev.com/cases.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/cases.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/cases.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/cases.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/cases.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/cases.html"/>
+  </url>
+
+  <!-- ══ BLOG ══ -->
+  <url>
+    <loc>https://maxtokarev.com/blog.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/blog.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/blog.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/blog.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/blog.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/blog.html"/>
+  </url>
+
+  <!-- ══ CONTACT ══ -->
+  <url>
+    <loc>https://maxtokarev.com/contact.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/contact.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/contact.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/contact.html"/>
+  </url>
+
+  <!-- ══ RESOURCES ══ -->
+  <url>
+    <loc>https://maxtokarev.com/resources.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/resources.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/resources.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/resources.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/resources.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/resources.html"/>
+  </url>
+
+  <!-- ══ AGENT ══ -->
+  <url>
+    <loc>https://maxtokarev.com/agent.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/agent.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/uk/agent.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/agent.html"/>
+  </url>
+  <url>
+    <loc>https://maxtokarev.com/ru/agent.html</loc>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxtokarev.com/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://maxtokarev.com/uk/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://maxtokarev.com/ru/agent.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxtokarev.com/agent.html"/>
+  </url>
+
+  <!-- ══ ARTICLES (English only) ══ -->
   <url><loc>https://maxtokarev.com/article-meta-cpl.html</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://maxtokarev.com/article-pmax-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://maxtokarev.com/article-tiktok-ecom.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -15,5 +195,5 @@
   <url><loc>https://maxtokarev.com/article-reddit-ads.html</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://maxtokarev.com/article-youtube-ads.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://maxtokarev.com/article-snapchat-ads.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://maxtokarev.com/contact.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
 </urlset>

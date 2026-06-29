@@ -86,8 +86,10 @@
 
   function init() {
     applyLang(localStorage.getItem(LANG_KEY) || 'en');
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', function () { applyLang(this.getAttribute('data-lang')); });
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('lang-btn')) {
+        applyLang(e.target.getAttribute('data-lang'));
+      }
     });
   }
 
