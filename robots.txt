@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://maxtokarev.com/sitemap.xml
+Disallow: /
